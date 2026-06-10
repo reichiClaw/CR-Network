@@ -206,7 +206,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-export function ReichiExperience() {
+export function CRVertexExperience() {
   useGsapReveals();
 
   return (
@@ -260,13 +260,13 @@ function SiteHeader() {
         aria-label="Primary navigation"
         className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-slate-950/55 px-4 py-3 shadow-2xl shadow-cyan-950/30 backdrop-blur-2xl sm:px-6"
       >
-        <a href="#hero" className="group flex items-center gap-3" aria-label="Reichi home">
+        <a href="#hero" className="group flex items-center gap-3" aria-label="CR Vertex home">
           <span className="grid size-10 place-items-center rounded-full border border-cyan-300/25 bg-cyan-300/10 shadow-lg shadow-cyan-400/20">
             <Router className="size-5 text-cyan-200" aria-hidden="true" />
           </span>
           <span>
-            <span className="block text-sm font-semibold tracking-[0.26em] text-white">REICHI</span>
-            <span className="block text-xs text-slate-400">Network Engineering</span>
+            <span className="block text-sm font-semibold tracking-[0.2em] text-white">CR VERTEX</span>
+            <span className="block text-xs text-slate-400">Network & Systems Integration</span>
           </span>
         </a>
         <div className="hidden items-center gap-1 md:flex">
@@ -312,7 +312,7 @@ function HeroSection() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-100 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl"
           >
             <Sparkles className="size-4" aria-hidden="true" />
-            Founder-led infrastructure architecture for serious networks
+            CR Vertex — Network & Systems Integration
           </motion.div>
           <motion.h1
             variants={fadeUp}
@@ -324,9 +324,9 @@ function HeroSection() {
             variants={fadeUp}
             className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-slate-300 sm:text-xl"
           >
-            Enterprise-grade networking, UniFi integration, WiFi optimization,
-            security, automation, and infrastructure consulting by Christian
-            Reichinger.
+            Network & Systems Integration for enterprise-grade networking,
+            UniFi integration, WiFi optimization, security, automation, and
+            infrastructure consulting by Christian Reichinger.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-9 flex flex-col gap-4 sm:flex-row">
             <a
@@ -435,7 +435,7 @@ function AboutSection() {
     <section id="about" className="relative px-4 py-24 sm:px-6 lg:py-32">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr]">
         <div className="gsap-reveal">
-          <SectionEyebrow>About Reichi</SectionEyebrow>
+          <SectionEyebrow>About CR Vertex</SectionEyebrow>
           <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-6xl">
             You work directly with the expert, not a sales team.
           </h2>
@@ -444,11 +444,12 @@ function AboutSection() {
           <FounderPortrait />
           <div className="gsap-reveal rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-slate-950/60 backdrop-blur-2xl sm:p-8">
             <p className="text-lg leading-8 text-slate-300">
-              Christian “Reichi” Reichinger brings hands-on engineering judgement
-              to networks that have to be secure, observable, and boringly
-              reliable. From first sketch to rack, firewall rule, access point,
-              camera, automation, and documentation, the work is owned end to
-              end by the person designing it.
+              CR Vertex is the founder-led practice of Christian “Reichi”
+              Reichinger, bringing hands-on engineering judgement to networks
+              that have to be secure, observable, and boringly reliable. From
+              first sketch to rack, firewall rule, access point, camera,
+              automation, and documentation, the work is owned end to end by
+              the person designing it.
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {[
@@ -858,8 +859,8 @@ function ContactSection() {
         </form>
       </div>
       <footer className="mx-auto mt-20 flex max-w-7xl flex-col gap-4 border-t border-white/10 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} Reichi Network Engineering & Integration.</p>
-        <p>Founder-led networking, systems integration, and infrastructure architecture.</p>
+        <p>© {new Date().getFullYear()} CR Vertex.</p>
+        <p>Network & Systems Integration by Christian Reichinger.</p>
       </footer>
     </section>
   );
@@ -944,7 +945,7 @@ function PremiumLoader() {
       animate={{ opacity: 0 }}
       transition={{ duration: 0.45, delay: 0.72 }}
       className="fixed inset-0 z-50 grid place-items-center bg-slate-950"
-      aria-label="Loading Reichi Network Engineering & Integration"
+      aria-label="Loading CR Vertex Network & Systems Integration"
     >
       <div className="relative grid size-28 place-items-center">
         <div className="absolute inset-0 rounded-full border border-cyan-300/20" />

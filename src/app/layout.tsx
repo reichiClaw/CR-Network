@@ -4,12 +4,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://reichi.com"),
   title: {
-    default: "Reichi Network Engineering & Integration",
-    template: "%s | Reichi Network Engineering & Integration",
+    default: "CR Vertex | Network & Systems Integration",
+    template: "%s | CR Vertex",
   },
   description:
-    "Enterprise-grade networking, UniFi integration, WiFi optimization, security, automation, and infrastructure consulting by Christian Reichinger.",
+    "Network & Systems Integration for enterprise-grade networking, UniFi integration, WiFi optimization, security, automation, and infrastructure consulting by Christian Reichinger.",
   keywords: [
+    "CR Vertex",
+    "Network & Systems Integration",
     "Reichi",
     "Christian Reichinger",
     "UniFi specialist",
@@ -22,21 +24,21 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Christian Reichinger", url: "https://reichi.com" }],
   creator: "Christian Reichinger",
-  publisher: "Reichi Network Engineering & Integration",
+  publisher: "CR Vertex",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://reichi.com",
-    siteName: "Reichi Network Engineering & Integration",
+    siteName: "CR Vertex",
     title: "Engineering Networks That Simply Work.",
     description:
-      "Hands-on network architecture, UniFi integration, WiFi optimization, security, automation, and modern IT infrastructure by Christian Reichinger.",
+      "Network & Systems Integration for hands-on network architecture, UniFi integration, WiFi optimization, security, automation, and modern IT infrastructure by Christian Reichinger.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reichi Network Engineering & Integration",
+    title: "CR Vertex | Network & Systems Integration",
     description:
-      "Premium network architecture, UniFi engineering, infrastructure integration, and automation by Christian Reichinger.",
+      "Premium network architecture, UniFi engineering, systems integration, and automation by Christian Reichinger.",
   },
   alternates: {
     canonical: "https://reichi.com",

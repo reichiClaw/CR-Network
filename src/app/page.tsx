@@ -1,11 +1,12 @@
 import Script from "next/script";
-import { ReichiExperience } from "@/components/reichi-experience";
+import { CRVertexExperience } from "@/components/reichi-experience";
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Reichi Network Engineering & Integration",
+  name: "CR Vertex",
   url: "https://reichi.com",
+  slogan: "Network & Systems Integration",
   founder: {
     "@type": "Person",
     name: "Christian Reichinger",
@@ -22,18 +23,18 @@ const structuredData = {
     "Cloud Integration",
   ],
   description:
-    "Enterprise-grade networking, UniFi integration, WiFi optimization, security, automation, and infrastructure consulting by Christian Reichinger.",
+    "Network & Systems Integration for enterprise-grade networking, UniFi integration, WiFi optimization, security, automation, and infrastructure consulting by Christian Reichinger.",
 };
 
 export default function Home() {
   return (
     <>
       <Script
-        id="reichi-structured-data"
+        id="cr-vertex-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <ReichiExperience />
+      <CRVertexExperience />
     </>
   );
 }
