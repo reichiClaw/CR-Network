@@ -12,9 +12,9 @@ import {
   CheckCircle2,
   CloudCog,
   Cpu,
+  ExternalLink,
   Fingerprint,
   Globe2,
-  Linkedin,
   LockKeyhole,
   Mail,
   Network,
@@ -817,7 +817,7 @@ function ContactSection() {
           </p>
           <div className="mt-10 grid gap-3">
             <ContactLink icon={Mail} label="Email" value="hello@reichi.com" href="mailto:hello@reichi.com" />
-            <ContactLink icon={Linkedin} label="LinkedIn" value="Christian Reichinger" href="https://www.linkedin.com/" />
+            <ContactLink icon={ExternalLink} label="LinkedIn" value="Christian Reichinger" href="https://www.linkedin.com/" />
             <ContactLink icon={Globe2} label="Website" value="reichi.com" href="https://reichi.com" />
           </div>
         </div>
