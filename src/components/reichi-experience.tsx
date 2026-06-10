@@ -1075,6 +1075,7 @@ function NetworkCanvas() {
 
 function TopologyOrb() {
   const mountRef = useRef<HTMLDivElement | null>(null);
+  const [webglAvailable, setWebglAvailable] = useState(true);
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -1084,7 +1085,14 @@ function TopologyOrb() {
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
     camera.position.z = 5.2;
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    } catch {
+      setWebglAvailable(false);
+      return;
+    }
+
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     mount.appendChild(renderer.domElement);
 
@@ -1166,6 +1174,7 @@ function TopologyOrb() {
   return (
     <div className="relative my-6 h-[330px] overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/55">
       <div ref={mountRef} className="absolute inset-0" aria-hidden="true" />
+      {!webglAvailable && <TopologyFallback />}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_24%,rgba(2,6,23,0.5)_72%)]" />
       <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2 text-xs text-slate-300">
         {[
@@ -1179,6 +1188,45 @@ function TopologyOrb() {
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+function TopologyFallback() {
+  const nodes = [
+    [50, 20],
+    [25, 40],
+    [72, 38],
+    [38, 62],
+    [62, 66],
+  ];
+
+  return (
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(14,165,233,0.28),transparent_34%),linear-gradient(135deg,rgba(8,47,73,0.28),rgba(2,6,23,0.8))]">
+      <svg className="absolute inset-0 size-full" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="fallback-topology-line" x1="0" x2="1">
+            <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#67e8f9" stopOpacity="0.78" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M50 20 L25 40 L38 62 L62 66 L72 38 L50 20 M25 40 L72 38 M38 62 L50 20"
+          fill="none"
+          stroke="url(#fallback-topology-line)"
+          strokeWidth="0.45"
+        />
+      </svg>
+      {nodes.map(([x, y], index) => (
+        <div
+          key={`${x}-${y}`}
+          className="absolute grid size-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-2xl border border-cyan-200/20 bg-cyan-300/10 shadow-2xl shadow-cyan-400/20 backdrop-blur-xl"
+          style={{ left: `${x}%`, top: `${y}%` }}
+        >
+          <span className="size-2.5 rounded-full bg-cyan-200 shadow-[0_0_22px_rgba(125,211,252,0.95)]" />
+          <span className="sr-only">Topology node {index + 1}</span>
+        </div>
+      ))}
     </div>
   );
 }
