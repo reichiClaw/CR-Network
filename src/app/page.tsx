@@ -5,7 +5,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "CR Vertex",
-  url: "https://reichi.com",
+  url: "https://crvertex.com",
   slogan: "Network & Systems Integration",
   founder: {
     "@type": "Person",

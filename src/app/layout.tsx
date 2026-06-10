@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://reichi.com"),
+  metadataBase: new URL("https://crvertex.com"),
   title: {
     default: "CR Vertex | Network & Systems Integration",
     template: "%s | CR Vertex",
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "infrastructure consulting",
     "enterprise networking",
   ],
-  authors: [{ name: "Christian Reichinger", url: "https://reichi.com" }],
+  authors: [{ name: "Christian Reichinger", url: "https://crvertex.com" }],
   creator: "Christian Reichinger",
   publisher: "CR Vertex",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://reichi.com",
+    url: "https://crvertex.com",
     siteName: "CR Vertex",
     title: "Engineering Networks That Simply Work.",
     description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Premium network architecture, UniFi engineering, systems integration, and automation by Christian Reichinger.",
   },
   alternates: {
-    canonical: "https://reichi.com",
+    canonical: "https://crvertex.com",
   },
 };
 

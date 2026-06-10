@@ -817,9 +817,9 @@ function ContactSection() {
             building.”
           </p>
           <div className="mt-10 grid gap-3">
-            <ContactLink icon={Mail} label="Email" value="hello@reichi.com" href="mailto:hello@reichi.com" />
+            <ContactLink icon={Mail} label="Email" value="hello@crvertex.com" href="mailto:hello@crvertex.com" />
             <ContactLink icon={ExternalLink} label="LinkedIn" value="Christian Reichinger" href="https://www.linkedin.com/" />
-            <ContactLink icon={Globe2} label="Website" value="reichi.com" href="https://reichi.com" />
+            <ContactLink icon={Globe2} label="Website" value="crvertex.com" href="https://crvertex.com" />
           </div>
         </div>
         <form className="gsap-reveal rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-slate-950/60 backdrop-blur-2xl sm:p-8">
@@ -851,8 +851,8 @@ function ContactSection() {
           </button>
           <p className="mt-4 text-sm leading-6 text-slate-400">
             Prefer email? Send the essentials directly to{" "}
-            <a className="text-cyan-200 underline-offset-4 hover:underline" href="mailto:hello@reichi.com">
-              hello@reichi.com
+            <a className="text-cyan-200 underline-offset-4 hover:underline" href="mailto:hello@crvertex.com">
+              hello@crvertex.com
             </a>
             .
           </p>
